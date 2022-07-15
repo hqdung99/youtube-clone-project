@@ -1,0 +1,136 @@
+$break-point: 800px;
+$transition-time-1: 0.2s;
+$transition-time-2: 1s;
+
+.container {
+  background: #282828;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.rightContainer {
+  height: 100%;
+  max-height: 100%;
+  border-right: 1px solid #ffffff1a;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItemContainer {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  cursor: pointer;
+  background: #282828;
+  transition: $transition-time-1;
+  color: #909090;
+
+  &:hover {
+    background: #1f1f1f;
+  }
+}
+
+.icon {
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuName {
+  font-size: 15px;
+  font-weight: 500;
+  transition: $transition-time-2;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media all and (min-width: $break-point) {
+    width: 180px;
+  }
+  @media all and (max-width: $break-point) {
+    width: 0px;
+  }
+}
+
+.selectedMenuItem {
+  background: #1f1f1f !important;
+  color: #fb4d43 !important;
+}
+
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.avatarWrapper {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: $transition-time-1 * 2;
+
+  @media all and (min-width: $break-point) {
+    width: 130px;
+    height: 130px;
+  }
+  @media all and (max-width: $break-point) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  transform: translate(0px, -30px);
+}
+
+.description {
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: $transition-time-1;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media all and (min-width: $break-point) {
+    width: fit-content;
+  }
+  @media all and (max-width: $break-point) {
+    width: 0px;
+    height: 0px;
+  }
+}
+
+.title {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0px 5px 0px;
+  transition: $transition-time-1 * 2;
+  overflow: hidden;
+  white-space: nowrap;
+
+  @media all and (min-width: $break-point) {
+    width: fit-content;
+  }
+  @media all and (max-width: $break-point) {
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+  }
+}
+
+.topContainer {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.bottomContainer {
+  border-top: 1px solid #ffffff1a;
+}
